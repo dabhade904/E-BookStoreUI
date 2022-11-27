@@ -17,13 +17,15 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { LoginComponent } from './components/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { ForgetPasswordComponent } from './components/forget-password/forget-password.component'; 
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component'; 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
