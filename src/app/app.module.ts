@@ -16,12 +16,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { LoginComponent } from './components/login/login.component';
 import {MatInputModule} from '@angular/material/input';
-import { SignUpComponent } from './components/sign-up/sign-up.component'; 
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component'; 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
