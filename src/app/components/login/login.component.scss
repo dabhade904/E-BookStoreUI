@@ -1,0 +1,114 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(183, 186, 186);
+    height: 100%;
+}
+.div-1{
+    border: 0px solid black;
+    max-width: 280px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: white;
+    padding: 50px 30px;
+}
+.div-2{
+    border: 0px solid black;
+    max-width: 350px;
+    max-height: 430px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 30px 40px;
+}
+.buttons{
+    border:none; 
+    background:none;
+    cursor: pointer;
+}
+.buttons-font{
+    font-weight: 600;
+    font-size: 20px;
+}
+.button-signup{
+    font-weight: 500;
+    font-size: 15px;
+    background-color: rgb(186, 32, 32);
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 5px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+.div-1-span{
+    font-weight: 550;
+    font-size: 15px;
+}
+.div-2-button{
+    display: flex;
+    gap: 25px;
+}
+.input-field{
+    width: 50%;
+    height: 0px;
+}
+.split{
+    font-size: 15px; 
+    font-weight:450; 
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+}
+.split:before {
+    content: "";
+    display: inline-table;
+    width: 50px;
+    height: 1.5px;
+    background: rgb(158, 154, 154);
+    left: 0;
+    top: 50%;
+    position: relative;
+    opacity: .5;
+  }
+  
+.split:after {
+    content: "";
+    display: inline-table;
+    width: 50px;
+    height: 1.5px;
+    background: rgb(158, 154, 154);
+    left: 0;
+    top: 50%;
+    position: relative;
+    opacity: .5;
+  }
+.button-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid black;
+    width: 130px;
+    height: 35px;
+    border-radius: 5px;
+}
+.fb{
+    background-color: rgb(77, 77, 201);
+}
+.gg{
+    background-color: lightgray;
+}
+.forget{
+    display: flex;
+    flex-flow: row-reverse;
+}
