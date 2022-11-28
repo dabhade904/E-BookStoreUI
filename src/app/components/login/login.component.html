@@ -13,23 +13,23 @@
             </button>
         </div>
         <div>
-            <form style="align-items: center;">
+            <form style="align-items: center;"[formGroup]="login" (ngSubmit)="onSubmit()">
                
                 <div style="display: flex; flex-direction:column;">
                     <label>Email Id</label>
                     <mat-form-field appearance="outline">
-                        <input matInput  type="text" class="input-field" style="height: 3rem;width: 100%;" >
+                        <input matInput  type="text" class="input-field" style="width: 100%;" formControlName="email">
                         <mat-error>Enter Email Id</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; flex-direction:column;">
                     <label>Password</label>
                     <mat-form-field appearance="outline">
-                        <input matInput [type]="hide ? 'password' : 'text'" required style="margin-top: 12px;">
+                        <input matInput [type]="hide ? 'password' : 'text'" required style="" formControlName="password">
                         <mat-icon  style="color:#9D9D9D" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>                        
-                        <mat-error>Enter Password</mat-error>
+                        <mat-error>Please Enter Password</mat-error>
                     </mat-form-field>
-                    <button class="buttons forget"  style="color:#9D9D9D"  routerLink="/forgot">Forget Password?</button>
+                    <button class="buttons forget"  style="color:#9D9D9D"  routerLink="/forgetpassword">Forget Password?</button>
                 </div>
                 <button  mat-raised-button type="submit" class="buttons button-signup">SIGNUP</button>
             </form>

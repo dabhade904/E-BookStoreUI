@@ -16,12 +16,19 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { LoginComponent } from './components/login/login.component';
 import {MatInputModule} from '@angular/material/input';
-import { SignUpComponent } from './components/sign-up/sign-up.component'; 
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { HomeComponentComponent } from './components/home-component/home-component.component'; 
+import { AuthguardServiceService } from './services/authguard-service/authguard-service.service';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    ForgetPasswordComponent,
+    ResetPasswordComponent,
+    HomeComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     AppRoutingModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatIconModule,
     MatSelectModule,MatExpansionModule
   ],
-  providers: [],
+  providers: [AuthguardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
