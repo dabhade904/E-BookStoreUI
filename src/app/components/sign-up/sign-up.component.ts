@@ -16,8 +16,8 @@ export class SignUpComponent {
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
       fullName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
+      email: ['', Validators.required,],
+      password: ['', Validators.required,],
       mobileNumber: ['', Validators.required]
     })
   }
@@ -27,20 +27,19 @@ export class SignUpComponent {
     if (this.registerForm.valid) {
       console.log("do api call");
       let data = {
-        fullName: this.registerForm.value.fullName,
+        fullName:this.registerForm.value.fullName,
         email: this.registerForm.value.email,
         password: this.registerForm.value.password,
-        mobileNumber: this.registerForm.value.mobileNumber
+        mobileNumber:this.registerForm.value.mobileNumber
+
       }
       this.user.SignUp(data).subscribe((Response: any) => {
-        console.log(Response);
+        console.log('responce :=>',Response);
       })
-    //  this.resetForm();
+    } else {
+      console.log("Invalid data", this.registerForm.value);
+      console.log("no api call");
     }
-    else {
-      console.log("invalid data", this.registerForm.value);
-     
-    }
+  //  this.router.navigateByUrl('/dashboard')
   }
-
 }

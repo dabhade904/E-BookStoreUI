@@ -66,7 +66,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "E-BookStoreWebApp:build:production"
+              "browserTarget": "E-BookStoreWebApp:build:production",
             },
             "development": {
               "browserTarget": "E-BookStoreWebApp:build:development"

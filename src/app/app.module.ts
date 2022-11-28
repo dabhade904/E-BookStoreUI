@@ -18,14 +18,16 @@ import { LoginComponent } from './components/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component'; 
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { HomeComponentComponent } from './components/home-component/home-component.component'; 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    HomeComponentComponent
   ],
   imports: [
     BrowserModule,
