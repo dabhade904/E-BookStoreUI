@@ -38,10 +38,6 @@ export class LoginComponent {
       console.log("Invalid data", this.login.value);
       console.log("no api call");
     }
-   this.router.navigateByUrl('/home')
-  }
-
-  resetForm() {
-    this.login.reset();
+    this.router.navigateByUrl('/home')  
   }
 }

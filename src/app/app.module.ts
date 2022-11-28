@@ -20,6 +20,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { HomeComponentComponent } from './components/home-component/home-component.component'; 
+import { AuthguardServiceService } from './services/authguard-service/authguard-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import { HomeComponentComponent } from './components/home-component/home-compone
     AppRoutingModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatIconModule,
     MatSelectModule,MatExpansionModule
   ],
-  providers: [],
+  providers: [AuthguardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
