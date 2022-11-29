@@ -16,4 +16,5 @@ export class HttpserviceService {
   getService(url: string, token: boolean = false, options: any) {
     return this.httpClient.get(url, token && options)
   }
+  
 }
