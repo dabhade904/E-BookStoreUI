@@ -10,7 +10,10 @@ export class HttpserviceService {
     return this.httpClient.post(url, data, token && options)
   }
 
-  postAuthorised(url : string, reqdata : any, token : boolean = true, httpOptions:any){
+  postAuthorised(url: string, reqdata: any, token: boolean = true, httpOptions: any) {
     return this.httpClient.post(url, reqdata, token && httpOptions);
+  }
+  getService(url: string, token: boolean = false, options: any) {
+    return this.httpClient.get(url, token && options)
   }
 }

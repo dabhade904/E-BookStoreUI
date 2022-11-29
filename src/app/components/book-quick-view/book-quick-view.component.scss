@@ -1,0 +1,71 @@
+.div-2{
+    width: 1000px;
+    border: 0px solid black;
+    margin: auto;
+    margin-top: 25px;
+}
+.quickView{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    margin-left: 100px;
+}
+.bookImg{
+    border: 1px solid #D1D1D1;
+    width: 240px;
+    height: 300px;
+
+}
+.details{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    border: 0px solid black;
+}
+.rating{
+    border: 0px solid black;
+    padding: 0px 5px;
+    background-color: #388E3C;
+    border-radius: 2px;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    width: fit-content;
+}
+.form{
+    width: 100%;
+    height: fit-content;
+    background: #F5F5F5;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.buttons{
+    border: none;
+    outline: none;
+    background: none;
+}
+.submitButton{
+    border: none;
+    outline: none;
+    background: #3371B5;
+    width: fit-content;
+    padding: 3px 7px;
+    border-radius: 3px;
+    margin-top: 20px;
+    display: flex;
+    align-self : flex-end;
+    cursor: pointer;
+}
+.cartbuttons{
+    border: none;
+    outline: none;
+    padding: 7px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.star-feedback img{
+    width: 30px;
+}

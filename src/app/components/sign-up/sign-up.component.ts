@@ -30,16 +30,17 @@ export class SignUpComponent {
         fullName:this.registerForm.value.fullName,
         email: this.registerForm.value.email,
         password: this.registerForm.value.password,
-        mobileNumber:this.registerForm.value.mobileNumber
+        mobileNumber:Number(this.registerForm.value.mobileNumber)
 
       }
       this.user.SignUp(data).subscribe((Response: any) => {
-        console.log('responce :=>',Response);
+        console.log(Response);
       })
-    } else {
-      console.log("Invalid data", this.registerForm.value);
-      console.log("no api call");
     }
+    // } else {
+    //   console.log("Invalid data", this.registerForm.value);
+    //   console.log("no api call");
+    // }
   //  this.router.navigateByUrl('/dashboard')
   }
 }
