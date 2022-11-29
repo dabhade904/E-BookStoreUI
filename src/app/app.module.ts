@@ -22,6 +22,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { HomeComponentComponent } from './components/home-component/home-component.component'; 
 import { GetBooksComponent } from './components/get-books/get-books.component';
 import { BookQuickViewComponent } from './components/book-quick-view/book-quick-view.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { BookQuickViewComponent } from './components/book-quick-view/book-quick-
     ResetPasswordComponent,
     HomeComponentComponent,
     GetBooksComponent,
-    BookQuickViewComponent
+    BookQuickViewComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
