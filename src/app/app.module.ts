@@ -20,7 +20,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { HomeComponentComponent } from './components/home-component/home-component.component'; 
-import { AuthguardServiceService } from './services/authguard-service/authguard-service.service';
+import { GetBooksComponent } from './components/get-books/get-books.component';
+import { BookQuickViewComponent } from './components/book-quick-view/book-quick-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,9 @@ import { AuthguardServiceService } from './services/authguard-service/authguard-
     SignUpComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    GetBooksComponent,
+    BookQuickViewComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { AuthguardServiceService } from './services/authguard-service/authguard-
     AppRoutingModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatIconModule,
     MatSelectModule,MatExpansionModule
   ],
-  providers: [AuthguardServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

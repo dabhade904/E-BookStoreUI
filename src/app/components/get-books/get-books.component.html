@@ -1,0 +1,28 @@
+<div class="div-2">
+    <div>
+        <span style=" font-weight:500; font-size: 20px; margin-right: 5px;">Books</span>
+        <span>({{totalBooks}} items)</span>
+    </div>
+    <div class="bookContainer" *ngFor="let books of bookList" (click)="quickView(books)" routerLink="/bookview">
+        <div class="books" >
+            <div class="images">
+                <img class="bookImg" src="{{books.bookImage}}">
+            </div>
+            <div class="bookdesc">
+                <span style="font-weight: 450;">{{books.bookName}}</span>
+                <span style="font-size: 13px; opacity:.5;">by {{books.author}}</span>
+                <div style="display: flex; gap:5px; ">
+                    <div class="rating">
+                        <span style="color: white;">{{books.rating}}</span>
+                        <img style="height: 10px; width:10px;" src="../../../assets/star_rate.svg">
+                    </div>
+                    <span style="opacity:.6;">({{books.ratingCount}})</span>
+                </div>
+                <div style="display: flex; gap:7px;">
+                    <span>Rs. {{books.discountPrice}}</span>
+                    <span style="opacity: .6; font-size:11px; text-decoration: line-through;">Rs. {{books.actualPrice}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
