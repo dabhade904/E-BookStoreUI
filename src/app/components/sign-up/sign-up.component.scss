@@ -1,4 +1,4 @@
-.main{
+.main {
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -7,7 +7,8 @@
     background-color: rgb(183, 186, 186);
     height: 100%;
 }
-.div-1{
+
+.div-1 {
     border: 0px solid black;
     max-width: 280px;
     max-height: 400px;
@@ -20,7 +21,14 @@
     background-color: white;
     padding: 50px 30px;
 }
-.div-2{
+
+.div-1 img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+
+.div-2 {
     border: 0px solid black;
     max-width: 350px;
     max-height: fit-content;
@@ -31,16 +39,48 @@
     background-color: white;
     padding: 30px 40px;
 }
-.buttons{
-    border:none; 
-    background:none;
+
+.buttons {
+    border: none;
+    background: none;
     cursor: pointer;
 }
-.buttons-font{
+
+.buttons-font {
     font-weight: 600;
     font-size: 20px;
 }
-.button-signup{
+
+.l-and-s-button {
+    display: flex;
+    gap: 120px
+}
+
+.user-FName {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+}
+
+.btn-signup {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+}
+
+
+.user-details mat-icon {
+    color: #9D9D9D;
+    height: 10px;
+    margin-top: -10px
+}
+
+.button-signup {
     font-weight: 500;
     font-size: 15px;
     background-color: rgb(186, 32, 32);
@@ -49,11 +89,13 @@
     height: 35px;
     margin-top: 6px;
 }
-.div-1-lable{
+
+.div-1 label {
     font-weight: 550;
     font-size: 15px;
 }
-.div-2-button{
+
+.div-2-button {
     display: flex;
     gap: 25px;
 }

@@ -1,28 +1,24 @@
 <div class="div-2">
     <div>
-        <span routerLink="/home"
-            style=" cursor: pointer; font-weight:500; font-size: 15px; margin-right: 5px; opacity: .5;">Home / </span>
+        <span routerLink="/home" class="home-tag">Home / </span>
         <span>My Wishlist </span>
     </div>
     <div class="container">
-        <div class="cartContainer" style=" border: 1px solid lightgray;">
+        <div class="cartContainer">
             <label>My Wishlist ({{qty}})</label>
         </div>
-        <div style="display: flex; flex-direction : row; padding: 10px;margin-top: -20px; border: 1px solid lightgray;"
-            *ngFor='let Items of wishListItems'>
-            <img style="width: 100px; height:140px;" src="{{Items.bookImage}}">
+        <div class="book-data" *ngFor='let Items of wishListItems'>
+            <img class="book-img" src="{{Items.bookImage}}">
             <div class="bookDetails">
                 <label style="font-size: 15px;">{{Items.bookName}}</label>
                 <label style="opacity: .6;">by {{Items.author}}</label>
-                <div style="display: flex; gap:7px;">
-                    <span>Rs. {{Items.discountPrice}}</span>
-                    <span style="opacity: .6; font-size:11px; text-decoration: line-through;">Rs.
-                        {{Items.actualPrice}}</span>
+                <div class="price-data">
+                    <span>Rs.{{Items.discountPrice}}</span>
+                    <span class="actual-price">Rs.{{Items.actualPrice}}</span>
                 </div>
             </div>
-            <button style="background-color: white;border:none" (click)="removeFromWishlist(Items.wishListId)">
-                <!-- <i class="material-icons">&#xe92b;</i> -->
-                <img src="../../../assets/delete.svg" alt="" style="margin-left: 250px;width: 30px;">
+            <button class="deletebtn" (click)="removeFromWishlist(Items.wishListId)">
+                <img src="../../../assets/delete.svg" alt="">
             </button>
         </div>
     </div>
