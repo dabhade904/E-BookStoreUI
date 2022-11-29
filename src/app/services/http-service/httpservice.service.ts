@@ -16,4 +16,7 @@ export class HttpserviceService {
   getService(url: string, token: boolean = false, options: any) {
     return this.httpClient.get(url, token && options)
   }
+  deleteService(url: string, token: boolean, httpHeadersOptions: any) {
+    return this.httpClient.delete(url,token && httpHeadersOptions)
+  }
 }

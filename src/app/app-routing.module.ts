@@ -7,6 +7,7 @@ import { HomeComponentComponent } from './components/home-component/home-compone
 import { LoginComponent } from './components/login/login.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 const routes: Routes = [
   {path:'signup', component:SignUpComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   children : [
     {path:'', redirectTo:"/home/getbooks", pathMatch:'full' },
     { path : 'getbooks', component:GetBooksComponent},
-    { path : 'quickView', component:BookQuickViewComponent}
+    { path : 'quickView', component:BookQuickViewComponent},
+    { path : 'wishlist', component:WishlistComponent}
   ]
 }
 ];
