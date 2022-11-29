@@ -31,5 +31,11 @@ export class WishlistComponent {
       console.log(this.getWishListBooks)
     })
   }
-  
+  removeFromWishlist(wishListId:any){
+    console.log("bbbbbbbb",wishListId);
+    this.wishListservice.removeFromWishlist(wishListId).subscribe((response : any) =>{
+      console.log(response);
+      this.getWishlist();
+    });
+  }
 }
