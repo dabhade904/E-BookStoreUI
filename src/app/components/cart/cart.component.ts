@@ -9,7 +9,7 @@ import { GetbooksService } from 'src/app/services/getbook-service/getbooks.servi
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
-  cartlist:any;
+  cartlist:any=[];
   defaultImage: any = "https://www.prachiindia.com/ModuleFiles/Items/Cover_image.png";
   step: number = 0;
   wishListItems: any={};

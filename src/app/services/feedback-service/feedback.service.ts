@@ -10,14 +10,14 @@ export class FeedbackService {
   tokan = localStorage.getItem('tokan')
   constructor(private httpService :HttpserviceService) { }
 
-  addFeedback(data : any){
+  addFeedback(data : any,bookId:any){
     let header = {
       headers : new HttpHeaders({
         'Content-type':'application/json',
         'Authorization':'Bearer '+this.tokan
       })
     }
-    return this.httpService.postAuthorised('https://localhost:44349/api/FeedBack/Add', data, true, header);
+    return this.httpService.postAuthorised('https://localhost:44371/api/Feedback/AddFeedback?bookId='+bookId, data, true, header);
   }
 
   getFeedback(bookId : any){
@@ -27,7 +27,7 @@ export class FeedbackService {
         'Authorization':'Bearer '+this.tokan
       })
     }
-    return this.httpService.getService('https://localhost:44349/api/FeedBack/GetAll?bookId='+bookId, true, header);
+    return this.httpService.getService('https://localhost:44371/api/Feedback/GetAll?bookId='+bookId, true, header);
   }
 
 }

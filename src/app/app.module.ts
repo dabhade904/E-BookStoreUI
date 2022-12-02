@@ -25,6 +25,7 @@ import { BookQuickViewComponent } from './components/book-quick-view/book-quick-
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { CartComponent } from './components/cart/cart.component';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatDividerModule} from '@angular/material/divider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,7 @@ import {MatRadioModule} from '@angular/material/radio';
     BrowserModule,
     AppRoutingModule, BrowserAnimationsModule,BrowserModule,FormsModule, ReactiveFormsModule,MatToolbarModule,HttpClientModule,MatMenuModule,MatCardModule,
     AppRoutingModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatIconModule,
-    MatSelectModule,MatExpansionModule,MatRadioModule
+    MatSelectModule,MatExpansionModule,MatRadioModule,MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
