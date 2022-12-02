@@ -22,13 +22,13 @@ export class GetBooksComponent {
       console.log(response);
       this.bookList = response.data;
       this.totalBooks = response.data.length;
-      console.log(this.bookList);
+      console.log("onsubmit book get data",this.bookList);
       console.log(this.totalBooks)
     })
   }
   quickView(books : any){
-    console.log("book id ",books.id)
-    console.log("book data",books);
+    console.log("bookgljjjjjjjjjjjjjh id ",books.bookId)
+    console.log("bookghkkkkkkkkkk data",books);
     localStorage.setItem('bookId', books.id);
     this.route.navigateByUrl("/home/quickView")
   }

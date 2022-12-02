@@ -1,17 +1,18 @@
 <div class="div-2">
     <div>
         <span routerLink="/home"
-            style=" cursor: pointer; font-weight:500; font-size: 15px; margin-right: 5px; opacity: .5;">Home / </span>
+            style=" cursor: pointer; font-weight:500; font-size: 15px; margin-right: 5px; opacity: .5;">Home / 
+        </span>
         <span>Book ({{qty}})</span>
     </div>
     <div class="quickView">
         <div class="bookImg">
             <img style="width: 200px; height: 260px; padding: 20px;" src="{{getBookById.bookImage}}">
             <div style="margin-top: 20px; display: flex;flex-direction: row; justify-content: space-around;">
-                <button class="cartbuttons" style="background: #A03037;">
+                <button class="cartbuttons" style="background: #A03037;" (click)="addToCart()">
                     ADD TO BAG
                 </button>
-                <button class="cartbuttons" style="background : #333333" routerLink="/home/wishlist" >
+                <button class="cartbuttons" style="background : #333333" (click)="addToWishlist()"  >
                     WISHLIST
                 </button>
             </div>
