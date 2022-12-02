@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookQuickViewComponent } from './components/book-quick-view/book-quick-view.component';
+import { CartComponent } from './components/cart/cart.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { GetBooksComponent } from './components/get-books/get-books.component';
 import { HomeComponentComponent } from './components/home-component/home-component.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
     {path:'', redirectTo:"/home/getbooks", pathMatch:'full' },
     { path : 'getbooks', component:GetBooksComponent},
     { path : 'quickView', component:BookQuickViewComponent},
-    { path : 'wishlist', component:WishlistComponent}
+    { path : 'wishlist', component:WishlistComponent},
+    { path : 'addtocart',component:CartComponent}
   ]
 }
 ];
