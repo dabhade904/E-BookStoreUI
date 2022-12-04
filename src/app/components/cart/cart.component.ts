@@ -9,10 +9,9 @@ import { GetbooksService } from 'src/app/services/getbook-service/getbooks.servi
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
-  cartlist:any=[];
+  cartlist = new Array()
   defaultImage: any = "https://www.prachiindia.com/ModuleFiles/Items/Cover_image.png";
   step: number = 0;
-  wishListItems: any={};
   fullName: any;
   mobileNumber: any;
   addressList: any;
@@ -26,45 +25,44 @@ export class CartComponent {
   addressType: any
   bookId: any;
   qty: any;
-  resultArray:any;
   getWishListBooks = new Array()
-
+  id:any;
   constructor(private cart: CartService,private bookService:GetbooksService,
     private router:Router) { }
 
   ngOnInit(): void {
     this.fullName = localStorage.getItem('name');
     this.mobileNumber = localStorage.getItem('mobile');
-   this.getCartlist();
-  //  this. getCartData() ;
+    //this.getCartlist();
+    this.getCart();
   }
   //geetting  cart
+
+  getCart() {
+    this.cart.getCart().subscribe((response: any) => {
+      console.log(response);
+      this.cartlist = response;
+      //this.id=this.cartlist
+      //console.log("id is",this.id); 
+      this.cartlist.forEach((element: any) => {
+        console.log(element)
+        this.bookService.getBookById(element.bookId).subscribe((response: any) => {
+          console.log(response);
+          this.getWishListBooks.push(response);
+        })
+      });
+      
+    })
+    console.log("data",this.getWishListBooks)
+  }
+
   getCartlist() {
     this.cart. getCart().subscribe((response: any) => {
       console.log("Got All cart items", response);
       this.cartlist = response;
-       this.qty = this.cartlist.length;
-      console.log('BookIds : ', this.cartlist);
-      console.log('BookIds : ', this.cartlist.cartsQty);  
+      console.log('BookIds : ', this.cartlist);  
     });
   }
-
-  getCartData() {
-    this.cart.getCart().subscribe((response: any) => {
-      console.log(response);
-      this.wishListItems = response;
-      this.qty = this.wishListItems.length;
-      this.wishListItems.forEach((element: any) => {
-        console.log(element)
-        this.bookService.getBookById(element.bookId).subscribe((response: any) => {
-          console.log(response)
-          this.getWishListBooks.push(response.data)
-        })
-      })
-      console.log(this.getWishListBooks)
-    })
-  }  
-
   
   decreaseQty(cartId: any, cartsQty: any) {
     this.cart.updateCart(cartId, (cartsQty - 1)).subscribe((response: any) => {
